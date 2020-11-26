@@ -8,7 +8,6 @@ const job = new CronJob({
   cronTime: '00 00 00 * * * ',
   onTick: function () {
     //Your code that is to be executed on every midnight
-    console.log("---")
     main(0, 5);
   },
   start: true,
