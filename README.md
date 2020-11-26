@@ -3,6 +3,7 @@
 # Start command:
 npm start
 
+- Runs on localhost:4000
 
 - Files are cached and extracted on the fly using streams.
 
