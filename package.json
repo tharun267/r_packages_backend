@@ -4,13 +4,16 @@
   "description": "Interface to help the R community.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src"
   },
   "author": "Tharun Bathula",
   "license": "ISC",
   "dependencies": {
+    "apollo-server": "^2.19.0",
     "axios": "^0.21.0",
+    "cron": "^1.8.2",
     "debian-control": "^1.0.0",
+    "graphql": "^15.4.0",
     "mongodb": "^3.6.3",
     "tar-stream": "^2.1.4",
     "zlib": "^1.0.5"

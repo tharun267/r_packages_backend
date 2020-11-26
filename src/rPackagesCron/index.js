@@ -102,18 +102,22 @@ async function main(start, end) {
             });
 
         const rPackageList = await Promise.all(rPackagePromises);
-        let fileJSON = JSON.parse(fs.readFileSync('rPackagesList.json').toString());
-        fs.writeFileSync('rPackagesList.json', JSON.stringify([...fileJSON, ...rPackageList]));
+        let fileJSON = JSON.parse(fs.readFileSync(__dirname + '/../data/rPackagesList.json').toString());
+        // Only save unique objects to file
+        fs.writeFileSync(__dirname + '/../data/rPackagesList.json', JSON.stringify([...new Set([...fileJSON, ...rPackageList])]));
         // Repeat
-        main(end + 5, end + (2 * 5));
-
+        // END Condition
+        if (end <= rPackagesDataList.length)
+            main(end, end + 5);
     } catch (error) {
         console.log(error);
     }
 }
 
 
-main(0, 5);
+module.exports = {
+    main
+}
 
 
 

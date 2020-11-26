@@ -1,12 +1,12 @@
 # R Packages backend
 
 # Start command:
-node index.js
+npm start
 
 
-Files are cached and extracted on the fly using streams.
+- Files are cached and extracted on the fly using streams.
 
-Data is persisted in the file rPackagesList.json.
+- Data is persisted in the file rPackagesList.json.
 
-Please download the file and use JSON prettier for the better view of JSON file.
+- Please download the file and use JSON prettier for the better view of JSON file.
 
